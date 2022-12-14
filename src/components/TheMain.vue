@@ -1,4 +1,6 @@
 <script>
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 export default {
   components: { AppCard, CardSerie },
 
@@ -16,8 +18,11 @@ import {store} from '../store'
 </script>
 
 <template>
+  
   <AppCard></AppCard>
   <CardSerie></CardSerie>
+  
+  
 </template>
 
 <style>

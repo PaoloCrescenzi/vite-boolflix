@@ -18,7 +18,11 @@ export default {
   <div class="container">
     <div class="row gap-2 justify-content-between">
       <div class="card col-4" style="width: 18rem;" v-for="(card, i) in store.Movies">
-        <img class="card-img-top" :src="'https://image.tmdb.org/t/p/w500'+ card.backdrop_path" alt="image not found">
+
+        <div class="img-container">
+          <img class="card-img-top" :src="'https://image.tmdb.org/t/p/w500'+ card.poster_path" alt="image not found">
+        </div>
+
         <div class="card-body">
           <h4 class="card-title">{{ card.title }}</h4>
           <h5 class="card-title">{{ card.original_title }}</h5>
@@ -34,7 +38,5 @@ export default {
 </template>
 
 <style>
-  img{
-    width: 100%;
-  }
+  
 </style>
