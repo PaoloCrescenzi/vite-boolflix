@@ -30,6 +30,18 @@ export default {
           store.Movies = resp.data.results
           console.log(store.Movies)
         })
+
+      axios.get('https://api.themoviedb.org/3/search/series?', {
+        params: {
+          language: "it-IT",
+          api_key: "b87490d8045dfe2258fcde335abc7cc0",
+          query: store.SearchText
+        }
+      })
+        .then(resp => {
+          store.Series = resp.data.results
+          console.log(store.Series)
+        })
     }
   }
 }

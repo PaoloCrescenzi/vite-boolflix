@@ -1,6 +1,6 @@
 <script>
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { store } from "../store"
+import { store } from "../store";
 
 export default {
   data() {
