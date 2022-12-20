@@ -1,4 +1,5 @@
 <script>
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { store } from "../store"
 export default {
   data() {
@@ -9,7 +10,7 @@ export default {
   },
 
   methods: {
-    ClickSearch(){
+    ClickSearch() {
       this.$emit("ClickSearch")
     }
   }
@@ -18,16 +19,22 @@ export default {
 </script>
 
 <template>
-  <h1>Boolflix</h1>
-  <nav class="navbar navbar-light bg-light">
-    <form role="search" class="form-inline d-flex container">
-      <input v-model="store.SearchText" class="form-control mr-sm-2" type="search" placeholder="Search"
-        aria-label="Search">
-      <button @click="ClickSearch()" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
-    </form>
-  </nav>
+  <div class="justify-content-center">
+    <nav class="navbar navbar-light bg-black p-0">
+      <form role="search" class="form-inline container">
+        <div class="text-danger">
+          <h1>Boolflix</h1>
+        </div>
+        <div class="type d-flex">
+          <input v-model="store.SearchText" class="form-control mr-sm-2" type="search" placeholder="Cerca un Film o Serie" aria-label="Search">
+          <button @click="ClickSearch()" class="btn btn-outline-danger my-2 my-sm-0" type="button">Cerca</button>
+        </div> 
+      </form>
+    </nav>
+  </div>
+
 </template>
 
-<style>
+<style scoped>
 
 </style>

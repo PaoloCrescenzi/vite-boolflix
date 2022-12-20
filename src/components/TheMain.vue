@@ -25,6 +25,6 @@ import {store} from '../store'
   
 </template>
 
-<style>
+<style scoped>
 
 </style>
